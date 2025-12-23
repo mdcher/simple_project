@@ -1,0 +1,45 @@
+{
+  "name": "simple_project",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/mdcher/simple_project#readme",
+  "bugs": {
+    "url": "https://github.com/mdcher/simple_project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdcher/simple_project.git"
+  },
+  "license": "MIT",
+  "author": "mdcher",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "demo": "tsx src/demo.ts",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^20.2.0",
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^25.0.3",
+    "commitlint": "^20.2.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "prettier": "^3.7.4",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.1"
+  }
+}
