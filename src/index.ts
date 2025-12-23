@@ -1,5 +1,12 @@
-export function hello(name: string): string {
-  return `Hello, ${name}!`;
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+/** Мінімальні утиліти без суворої типізації */
+
+export function add(a: any, b: any) {
+  return a + b;
 }
 
-console.log(hello('World'));
+export function capitalize(s: any) {
+  return String(s).charAt(0).toUpperCase() + String(s).slice(1);
+}
